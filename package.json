@@ -4,7 +4,7 @@
   "description": "A Bulkhead service that allows SailsJS projects to easily utilize LearnBoost's Kue.",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test node_modules/.bin/mocha test --recursive"
+    "test": "NODE_ENV=test node_modules/bulkhead-test/node_modules/.bin/mocha test --recursive"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,12 @@
   },
   "homepage": "https://github.com/CodeOtter/bulkhead-kue",
   "dependencies": {
-    "bulkhead": "^0.0.2"
+    "async": "^0.9.0",
+    "bulkhead": "0.0.7",
+    "kue": "^0.8.3",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
-    "mocha": "^1.21.3"
+    "bulkhead-test": "0.0.6"
   }
 }
