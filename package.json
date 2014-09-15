@@ -1,6 +1,6 @@
 {
   "name": "bulkhead-kue",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A Bulkhead service that allows SailsJS projects to easily utilize LearnBoost's Kue.",
   "main": "index.js",
   "scripts": {
