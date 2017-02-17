@@ -18,7 +18,7 @@ module.exports = new function(){
 			});
 		},
 		'string': function(criteria, next) {
-			Kue.Job.getByState(criteria, 0, -1, 'desc', function(err, result) {
+			Kue.Job.rangeByState(criteria, 0, -1, 'desc', function(err, result) {
 				next(err, result ? result.data : result);
 			});
 		},
@@ -29,7 +29,7 @@ module.exports = new function(){
 			criteria.to = criteria.to || -1;
 			criteria.order = criteria.order || 'desc';
 
-			Kue.Job.getByType(criteria.type, criteria.state, criteria.from, criteria.to, criteria.order, function(err, result) {
+			Kue.Job.rangeByType(criteria.type, criteria.state, criteria.from, criteria.to, criteria.order, function(err, result) {
 				next(err, result ? result.data : result);
 			});
 		}
